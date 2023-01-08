@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/App.css";
 import Component from "./Component";
 import ErrorBoundary from "./ErrorBoundary";
-const App = () => {
+const App = () =>{
   let throwErrorFunction;
   let errorGenerator = () => {
     throwErrorFunction(true);
