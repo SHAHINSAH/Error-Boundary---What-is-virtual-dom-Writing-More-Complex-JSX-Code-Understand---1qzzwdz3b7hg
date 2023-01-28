@@ -2,15 +2,17 @@ import React from "react";
 import "../styles/App.css";
 import Component from "./Component";
 import ErrorBoundary from "./ErrorBoundary";
-const App = () =>{
-  let throwErrorFunction;
-  let errorGenerator = () => {
-    throwErrorFunction(true);
+const App = () => {
+  let setFunc;
+
+  let changeFunc = (func) => {
+    setFunc = func;
   };
 
-  let changeFunc = (updateError) => {
-    throwErrorFunction = updateError;
+  const errorGenerator = () => {
+    setFunc(true);
   };
+
   return (
     <div id="main">
       <h2>React Error Boundaries</h2>
